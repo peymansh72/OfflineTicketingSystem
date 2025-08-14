@@ -5,8 +5,8 @@ using Configurations;
 using Entities;
 
 public class AppDbContext(DbContextOptions options) : DbContext(options) {
-    public DbSet<UserEntity> Tickets { get; set; }
-    public DbSet<TicketEntity> Comments { get; set; }
+    public DbSet<UserEntity> Users { get; set; }
+    public DbSet<TicketEntity> Tickets { get; set; }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
