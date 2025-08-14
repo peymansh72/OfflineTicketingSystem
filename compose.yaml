@@ -1,0 +1,7 @@
+﻿services:
+  offlineticketingsystem:
+    image: offlineticketingsystem
+    build:
+      context: .
+      dockerfile: OfflineTicketingSystem/Dockerfile
+
