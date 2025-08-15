@@ -8,6 +8,7 @@ using OfflineTicketingSystem.Data;
 using OfflineTicketingSystem.Data.Enums;
 using OfflineTicketingSystem.Services;
 using System.Text;
+using OfflineTicketingSystem.Admin;
 
 var builder = WebApplication.CreateBuilder(args);
 var configuration = builder.Configuration;
@@ -88,6 +89,8 @@ builder.Services.AddAuthorization(options =>
 });
 
 var app = builder.Build();
+
+await SeedAdminUser.AddAdminUser(app);
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

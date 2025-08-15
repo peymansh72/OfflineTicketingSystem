@@ -23,7 +23,7 @@ public class TicketsController :ControllerBase
         }
 
         // POST /api/tickets – Create a new ticket (Employee only)
-        [HttpPost]
+        [HttpPost("Create New Ticket")]
         [Authorize(Policy = "EmployeeOnly")]
         public async Task<IActionResult> CreateTicket([FromBody] TicketCreateDTO createDto)
         {
@@ -70,7 +70,7 @@ public class TicketsController :ControllerBase
         }
 
         // GET /api/tickets – List all tickets (Admin only)
-        [HttpGet]
+        [HttpGet ("Admin")]
         [Authorize(Policy = "AdminOnly")]
         public async Task<IActionResult> GetAllTickets()
         {

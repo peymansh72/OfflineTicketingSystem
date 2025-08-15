@@ -1,6 +1,6 @@
 ﻿namespace OfflineTicketingSystem.DTOs.Requests;
 using System.ComponentModel.DataAnnotations;
-
+using Swashbuckle.AspNetCore.Annotations;
 public class RegisterDTO
 {
     [Required]

@@ -20,14 +20,12 @@ namespace OfflineTicketingSystem.Services
         {
             _config = config;
 
-            // خواندن کلید از appsettings
             var secretKey = _config["Jwt:Key"];
             if (string.IsNullOrWhiteSpace(secretKey))
                 throw new InvalidOperationException("JWT Key not found in configuration.");
 
             var keyBytes = Encoding.UTF8.GetBytes(secretKey);
             
-            // چک کردن طول برای HMAC-SHA512 (حداقل 64 بایت)
             if (keyBytes.Length < 64)
                 throw new InvalidOperationException(
                     $"JWT Key must be at least 64 bytes for HMAC-SHA512. Current: {keyBytes.Length} bytes.");
