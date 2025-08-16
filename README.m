@@ -37,12 +37,11 @@ To run this project on your local machine, follow these steps.
 ### Installation and Execution
 
 1.  **Clone the Repository**
-    Open your terminal or command prompt and clone the project.
-    
-```bash
+    Open your terminal or command prompt and clone the project:
+    ```
     git clone <your-repository-url>
     cd <project-folder-name>
-```
+    ```
 OR 
 
 1.  **Download and Extract the Project**
