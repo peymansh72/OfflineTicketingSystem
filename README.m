@@ -38,10 +38,10 @@ To run this project on your local machine, follow these steps.
 
 1.  **Clone the Repository**
     Open your terminal or command prompt and clone the project.
-    ```
+```
     git clone <your-repository-url>
     cd <project-folder-name>
-    ```
+```
 OR 
 
 1.  **Download and Extract the Project**
@@ -51,22 +51,22 @@ OR
 
 2.  **Restore Dependencies**
     This command downloads all the required NuGet packages defined in the project file.
-    ```
+```
     dotnet restore
-    ```
+```
 
 3.  **Update the Database**
     The project uses Entity Framework Core migrations to manage the database schema. The `dotnet ef database update` command will create the `ticketing.db` SQLite file (if it doesn't exist) and set up all the necessary tables.
-    ```
+```
     dotnet ef database update
-    ```
+```
     *Note: If you run the project without this step, the application is also configured to apply migrations automatically on startup.*
 
 4.  **Run the Application**
     This command builds and runs the project. The API will start listening for requests.
-    ```
+```
     dotnet run
-    ```
+```
     By default, the application will be accessible at `http://localhost:5000` or `https://localhost:5001` (check your console output for the exact URLs).
 
 ## 🚀 API Usage
